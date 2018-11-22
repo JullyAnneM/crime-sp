@@ -16,18 +16,18 @@
   <div class="container">
 
     <div class="col-lg-6">
-      <h2>Insira o CEP</h2>
+      <h2>Insira seu Endereço</h2>
       <p class="lead">Descubra qual o grau de criminalidade em determinada região e evite situações desagradáveis!</p>
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Seu CEP">
+        <input required [(ngModel)]="endereco" name="name" type="text" class="form-control" placeholder="Rua, Cidade, Estado">
         <span class="input-group-btn">
-          <button class="btn btn-info" type="button">Pesquisar</button>
+          <button class="btn btn-info" type="button" (click)="sendAdress()" >Pesquisar</button>
       </span>
       </div>
     </div>
-
     <div class="col-lg-6">
-      <img class="img-responsive" src="https://cloud.google.com/images/maps-platform/complementary_routes8.png?hl=pt-BR"/>
+      <!-- <img class="img-responsive" src="https://cloud.google.com/images/maps-platform/complementary_routes8.png?hl=pt-BR"/> -->
+      <div #gmap style="width:100%;height:400px"></div>
     </div>
 
   </div>
@@ -38,3 +38,4 @@
 		<h4>Tópicos Especiais de Bancos de Dados, 2018</h4>
 	</div>
 </footer>
+''
