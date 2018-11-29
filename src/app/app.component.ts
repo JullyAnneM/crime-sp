@@ -23,12 +23,15 @@ export class AppComponent {
 
   lat = -23.4855167;
   long = -46.503477;
+  risk:string;
   res: any;
   endereco:string = '';
+  show:boolean;
 
 
 
   ngOnInit() {
+    this.show = false;
     var mapProp = {
       center: new google.maps.LatLng(this.lat,this.long),
       zoom: 15,
@@ -43,6 +46,10 @@ export class AppComponent {
       if(data.lat && data.long){
         this.lat = data.lat
         this.long = data.long;
+        this.risk = data.risk;
+        if(this.risk != null){
+          this.show = true;
+        }
       }
       var mapProp = {
         center: new google.maps.LatLng(this.lat,this.long),

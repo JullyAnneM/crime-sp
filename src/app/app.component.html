@@ -24,6 +24,25 @@
           <button class="btn btn-info" type="button" (click)="sendAdress()" >Pesquisar</button>
       </span>
       </div>
+      <div class="mt-2" *ngIf="show">
+        <h3>Risco estimado: <span style="background-color: red; color:aliceblue; font-weight: bold;">{{risk[0].risco}}</span> </h3>
+        <table class="table ">
+          <thead>
+            <tr>
+              <th scope="col">Risco Baixo</th>
+              <th scope="col">Risco Médio</th>
+              <th scope="col">Risco Alto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">0-100</th>
+              <td>201-400</td>
+              <td>401+</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
     </div>
     <div class="col-lg-6">
       <!-- <img class="img-responsive" src="https://cloud.google.com/images/maps-platform/complementary_routes8.png?hl=pt-BR"/> -->
@@ -31,7 +50,7 @@
     </div>
 
   </div>
-</div>
+</div >
 
 <footer class="page-footer">
 	<div class="footer-copyright text-center">
