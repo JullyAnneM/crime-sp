@@ -25,20 +25,24 @@
       </span>
       </div>
       <div class="mt-2" *ngIf="show">
+        <br>
         <h3>Risco estimado: <span style="background-color: red; color:aliceblue; font-weight: bold;">{{risk[0].risco}}</span> </h3>
+        <br>
         <table class="table ">
           <thead>
             <tr>
               <th scope="col">Risco Baixo</th>
               <th scope="col">Risco Médio</th>
               <th scope="col">Risco Alto</th>
+              <th scope="col">Risco Muito Alto</th>              
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">0-100</th>
-              <td>201-400</td>
-              <td>401+</td>
+              <th scope="row">0 - 336</th>
+              <td>337 - 467</td>
+              <td>468 - 646</td>
+              <td>647 - ∞</td>              
             </tr>
           </tbody>
         </table>
